@@ -83,6 +83,8 @@ Job 2 has finished
 **Why this happen ?**
 Before thread 1 finish, thread 2 might be scheduled, and context switch happen. Thus before thread 1 finish, thread 2 start and modify the global value, thus thread 1 finish with the value set to 2.
 
+**Mutex**
+
 To solve this problem, we can use **Mutex**. It is a lock for critical region, in this case is the `trythis()`.
 1. Mutex is a lock that we set before we use shared resource and release after using it.
 2. When the lock is set, no other thread can access the lock region. Context switch still happen, but no threads can execute except for the thread has the lock.
@@ -136,3 +138,33 @@ int main(void)
     return 0;
 }
 ```
+
+**Semaphore**
+It is a variable. There two kinds of semaphore : 
+1. Binary semaphore : 
+    It is like mutex. When it is zero, wait. When it is one, operate the critical section.
+2. Counter semaphore : 
+    There might me multiple units of one resource, thus semaphore can be more than one. Consider following codes : 
+    ```cpp
+    P(Semaphore s) 
+    { 
+        s = s - 1; 
+        if (s < 0) { 
+            // add process to queue 
+            block(); 
+        } 
+    } 
+  
+    V(Semaphore s) 
+    { 
+        s = s + 1; 
+        if (s >= 0) { 
+            // remove process p from queue 
+            wakeup(p); 
+        } 
+    } 
+    ```
+    When there are no available resource, the process is put into a queue by calling `block()`, wait for the semaphore. Once there are semaphores, the process is resumed by calling `wakeup()`.
+    This implementation is more efficient than using a while loop to check.
+
+
