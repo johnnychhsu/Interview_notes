@@ -14,7 +14,7 @@ Http request and response message format consist of following part :
 3. Empty line
 4. Message body
 
-**Request message** \n
+**Request message** <br />
 The start line is like : 
 ```command
 Method Request-URL HTTP-Version CRLF
