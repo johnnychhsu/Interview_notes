@@ -76,7 +76,7 @@ print(get_text("John"))
 # Outputs <p>Hello John</p>
 ```
 
-**Other things to note**
+**Other things to note** <br />
 After we decoarte a function, the attributes like `__name__`, `__doc__` of the original function are overridden by the decorator. This may lead to some problems when debugging. To solve this issue, we can use `functools.wraps` : 
 ```python
 from functools import wraps
@@ -98,6 +98,29 @@ print(get_text.__name__) # get_text
 print(get_text.__doc__) # returns some text
 print(get_text.__module__) # __main__
 ``` 
+
+### Real Example
+```python
+import functools
+import time
+
+def timer(func):
+    """Print the runtime of the decorated function"""
+    @functools.wraps(func)
+    def wrapper_timer(*args, **kwargs):
+        start_time = time.perf_counter()    # 1
+        value = func(*args, **kwargs)
+        end_time = time.perf_counter()      # 2
+        run_time = end_time - start_time    # 3
+        print(f"Finished {func.__name__!r} in {run_time:.4f} secs")
+        return value
+    return wrapper_timer
+
+@timer
+def waste_some_time(num_times):
+    for _ in range(num_times):
+        sum([i**2 for i in range(10000)])
+```
 
 ### Reference
 [Python Decorator](https://www.thecodeship.com/patterns/guide-to-python-function-decorators/)
