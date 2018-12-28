@@ -123,4 +123,5 @@ def waste_some_time(num_times):
 ```
 
 ### Reference
-[Python Decorator](https://www.thecodeship.com/patterns/guide-to-python-function-decorators/)
+1. [Python Decorator](https://www.thecodeship.com/patterns/guide-to-python-function-decorators/)
+2. [More detail about decorator](https://realpython.com/primer-on-python-decorators/#syntactic-sugar)
