@@ -75,6 +75,10 @@ print(get_text("John"))
 
 # Outputs <p>Hello John</p>
 ```
+The reason we need one more layer in the decorator is : <br />
+We want the decorator to return an augmented function, thus we need a inner function, then return it. If we want to pass value into decorator, then we need one more function to accpet the parameter. 
+<br />
+If we don't use the @ symbol, instead write it ourself, then we don't need the outter layer.
 
 **Other things to note** <br />
 After we decoarte a function, the attributes like `__name__`, `__doc__` of the original function are overridden by the decorator. This may lead to some problems when debugging. To solve this issue, we can use `functools.wraps` : 
