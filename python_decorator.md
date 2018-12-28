@@ -1,6 +1,103 @@
 ## Decorator
+Function decorators are simply wrapper for function. Bwlow are some facts that help to understand decorator : 
+
+1. Function can be passed as a parameter
+2. Function can return other function
+3. Inner function have access to the encoding scope (closure)
+    ```python
+    def compose_greet_func(name):
+        def get_message():
+            return "Hello there "+name+"!"
+
+        return get_message
+
+    greet = compose_greet_func("John")
+    print(greet())
+
+    # Outputs: Hello there John!
+    ```
 
 ### Example
+**Composition of decorator** <br />
+```python
+def get_text(name):
+   return "lorem ipsum, {0} dolor sit amet".format(name)
+
+def p_decorate(func):
+   def func_wrapper(name):
+       return "<p>{0}</p>".format(func(name))
+   return func_wrapper
+
+my_get_text = p_decorate(get_text)
+
+print(my_get_text("John"))
+
+# <p>Outputs lorem ipsum, John dolor sit amet</p>
+```
+This is our first decorator! A function that takes another function as an argument, generate a new function, and return the generated function.<br />
+To have get_text decirated by p_decorated, we can simply
+```python
+get_text = p_decorated(get_text)
+```
+Then `get_text` is augmented by `p_decorated` and can be used anywhere.
+
+### Python Syntax
+We don't need to do the previous assignment, we can simply use @ symbol to decorate.
+```python
+def p_decorate(func):
+   def func_wrapper(name):
+       return "<p>{0}</p>".format(func(name))
+   return func_wrapper
+
+@p_decorate
+def get_text(name):
+   return "lorem ipsum, {0} dolor sit amet".format(name)
+
+print(get_text("John"))
+
+# Outputs <p>lorem ipsum, John dolor sit amet</p>
+```
+
+We can pass arguments to decorator : 
+```python
+def tags(tag_name):
+    def tags_decorator(func):
+        def func_wrapper(name):
+            return "<{0}>{1}</{0}>".format(tag_name, func(name))
+        return func_wrapper
+    return tags_decorator
+
+@tags("p")
+def get_text(name):
+    return "Hello "+name
+
+print(get_text("John"))
+
+# Outputs <p>Hello John</p>
+```
+
+**Other things to note**
+After we decoarte a function, the attributes like `__name__`, `__doc__` of the original function are overridden by the decorator. This may lead to some problems when debugging. To solve this issue, we can use `functools.wraps` : 
+```python
+from functools import wraps
+
+def tags(tag_name):
+    def tags_decorator(func):
+        @wraps(func)
+        def func_wrapper(name):
+            return "<{0}>{1}</{0}>".format(tag_name, func(name))
+        return func_wrapper
+    return tags_decorator
+
+@tags("p")
+def get_text(name):
+    """returns some text"""
+    return "Hello "+name
+
+print(get_text.__name__) # get_text
+print(get_text.__doc__) # returns some text
+print(get_text.__module__) # __main__
+``` 
 
 ### Reference
 [Python Decorator](https://www.thecodeship.com/patterns/guide-to-python-function-decorators/)
