@@ -9,6 +9,7 @@
 6. [HTTP notes](https://github.com/johnnychhsu/Interview_notes/blob/master/http2_notes.md)
 7. [Python Decorator notes](https://github.com/johnnychhsu/Interview_notes/blob/master/python_decorator.md)
 8. [AVL Tree](https://github.com/johnnychhsu/Interview_notes/blob/master/avl_tree.md)
+9. [Algorithm related notes](https://github.com/johnnychhsu/Interview_notes/blob/master/algorithm.md)
 
 ### Reference
 1. [HTTP Tutorials](https://www.tutorialspoint.com/http/http_status_codes.htm)
