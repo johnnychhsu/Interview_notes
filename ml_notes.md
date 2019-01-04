@@ -1,5 +1,10 @@
 ## ML realted notes
 
+### Basic
+**Why batch normalization can't be used with dropout?**
+Dropout cause variance shift when inferencing. This will crack down the BN layer, because the mean and variance for inferencing is calculated during training.
+However, we don't do drop out when inferencing, thus cause this proble.
+
 ### Useful library
 1. [Facebook wav2letter](https://code.fb.com/ai-research/wav2letter/)
 
