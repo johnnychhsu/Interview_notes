@@ -206,7 +206,26 @@ External fragmentation can be solved by memory compaction or shuffle memory cont
 <br />
 
 **Paging** <br />
+Paging is a memory management technique in which process address space is broken into blocks of the same size called pages. The size of the process is measured in the number of pages. <br />
+Similarly, main memory is divided into small fixed-sized blocks of (physical) memory called frames and the size of a frame is kept the same as that of a page to have optimum utilization of the main memory and to avoid external fragmentation. <br />
 
+![Page map](./page_map_table.jpg)
+**Address Translation** <br />
+1. Page address is called logical address. 
+    `Logical Address = Page number + page offset`
+2. Frame address is calledphysical address. 
+    `Physical Address = Frame number + page offset`
+
+**Advantages and Disadvantages of Paging** <br />
+1. Paging reduces external fragmentation, but still suffer from internal fragmentation.
+2. Page table requires extra memory space, so may not be good for a system having small RAM.
+
+**Segmentation** <br />
+Segmentation is a memory management technique in which each job is divided into several segments of different sizes, one for each module that contains pieces that perform related functions. Each segment is actually a different logical address space of the program.
+<br />
+Segmentation memory management works very similar to paging but here segments are of variable-length where as in paging pages are of fixed size.
+<br />
+![Segmentation map](./segment_map_table.jpg)
 
 
 ### Reference
