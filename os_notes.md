@@ -210,6 +210,7 @@ Paging is a memory management technique in which process address space is broken
 Similarly, main memory is divided into small fixed-sized blocks of (physical) memory called frames and the size of a frame is kept the same as that of a page to have optimum utilization of the main memory and to avoid external fragmentation. <br />
 
 ![Page map](./page_map_table.jpg)
+<br />
 **Address Translation** <br />
 1. Page address is called logical address. 
     `Logical Address = Page number + page offset`
