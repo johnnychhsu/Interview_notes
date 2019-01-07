@@ -175,11 +175,11 @@ It is a variable. There two kinds of semaphore :
 ### Memory Management
 **Process Address Space** <br />
 The process address space is the set of logical addresses that a process references in its code.
-1. Symbolic address
+1. Symbolic address <br />
     The addresses used in a source code. The variable names, constants, and instruction labels are the basic elements of the symbolic address space.
-2. Relative address
+2. Relative address <br /> 
     At the time of compilation, a compiler converts symbolic addresses into relative addresses.
-3. Physical address
+3. Physical address <br />
     The loader generates these addresses at the time when a program is loaded into main memory.
 
 **Static & Dynamic Loading** <br />
@@ -228,6 +228,13 @@ Segmentation memory management works very similar to paging but here segments ar
 <br />
 ![Segmentation map](./segment_map_table.jpg)
 
+**Address Binding** <br />
+1. Compile Time : <br />
+This allocates a space in memory to the machine code of a computer when the program is compiled to an executable binary file. 
+2. Load Time : 
+If memory allocation is designated at the time the program is allocated, then no program can ever transfer from one computer to another in its compiled state. This is because the executable code will contain memory allocations that may already be in use by other programs on the new computer. In this instance, the program's logical addresses are not bound to physical addresses until the program is invoked and loaded into memory.
+3. Execution Time : 
+Execution time address binding usually applies only to variables in programs and is the most common form of binding for scripts, which don't get compiled. In this scenario, the program requests memory space for a variable in a program the first time that variable is encountered during the processing of instructions in the script.
 
 ### Reference
 1. [Memory Management](https://www.tutorialspoint.com/operating_system/os_memory_management.htm)
