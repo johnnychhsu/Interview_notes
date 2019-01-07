@@ -193,3 +193,22 @@ Swapping is a mechanism in which a process can be swapped temporarily out of mai
 <br />
 
 ![Swapping](./process_swapping.jpg)
+
+**Fragmentation** <br />
+As precesses are loaded and removed from memory, the free memory space are broken into pieces. These pieces are not continuous thus the left space might be enough, but no continuous space can be fitted for a new progress.
+1. External fragmentation : 
+    Total memory space is enough to satisfy a request or to reside a process in it, but it is not contiguous, so it cannot be used.
+2. Internal fragmentation : 
+    Memory block assigned to process is bigger. Some portion of memory is left unused, as it cannot be used by another process.
+![Fragmentation](./memory_fragmentation.jpg)
+
+External fragmentation can be solved by memory compaction or shuffle memory contents to place all free memory together in one large block.
+<br />
+
+**Paging** <br />
+
+
+
+### Reference
+1. [Memory Management](https://www.tutorialspoint.com/operating_system/os_memory_management.htm)
+
