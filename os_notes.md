@@ -236,6 +236,26 @@ If memory allocation is designated at the time the program is allocated, then no
 3. Execution Time : 
 Execution time address binding usually applies only to variables in programs and is the most common form of binding for scripts, which don't get compiled. In this scenario, the program requests memory space for a variable in a program the first time that variable is encountered during the processing of instructions in the script.
 
+**Demand Paging** <br />
+Definition : 
+1. Page Fault : If a program references a page which is not in the main memory.
+For demand paging, Pages are only loaded when needed. <br />
+Advantages :
+    1. More efficient use of memory.
+    2. Large virtual memory.
+Disadvantages : 
+    1. Number of tables and the amount of processor overhead for handling page interrupts are greater than in the case of the simple paged management techniques.
+
+**Reference String** <br />
+The string of memory references. <br />
+For a given page size, we only need to consider the page number. 
+
+**Page Replacement Algorithm** <br />
+1. LRU (Least Recently Used)
+2. MFU (Most Frequently Used)
+3. LFU (Least Frequently Used)
+4. Page Buffering
+
 ### Reference
 1. [Memory Management](https://www.tutorialspoint.com/operating_system/os_memory_management.htm)
-
+2. [Virtual Memory](https://www.tutorialspoint.com/operating_system/os_virtual_memory.htm)
