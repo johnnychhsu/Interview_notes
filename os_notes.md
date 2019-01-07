@@ -171,3 +171,25 @@ It is a variable. There two kinds of semaphore :
 **Mutex** is a lock mechanism, while semaphore is a signal mechanism. Mutex itself is a lock, it can only owned by a single process or thread at the same time. Also, only the owner can release the lock, this is used to assure atomic operation.
 
 **Semaphore** is a different concept, although the implementation of binary semaphore is similar to mutex. Semaphore can be multiple, thus once there is a room for it, the waiting process can join. 
+
+### Memory Management
+**Process Address Space** <br />
+The process address space is the set of logical addresses that a process references in its code.
+1. Symbolic address
+    The addresses used in a source code. The variable names, constants, and instruction labels are the basic elements of the symbolic address space.
+2. Relative address
+    At the time of compilation, a compiler converts symbolic addresses into relative addresses.
+3. Physical address
+    The loader generates these addresses at the time when a program is loaded into main memory.
+
+**Static & Dynamic Loading** <br />
+1. Static loading : 
+    If we have to load your program statically, then at the time of compilation, the complete programs will be compiled and linked without leaving any external program or module dependency.
+2. Dynamic loading : 
+    If we are using dynamic loading, dynamic routines of the library are stored on a disk in relocatable form and are loaded into memory only when they are needed by the program.
+
+**Swapping** <br />
+Swapping is a mechanism in which a process can be swapped temporarily out of main memory (or move) to secondary storage (disk) and make that memory available to other processes.
+<br />
+
+![Swapping](./process_swapping.jpg)
