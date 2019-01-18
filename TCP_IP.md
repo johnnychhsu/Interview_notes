@@ -35,3 +35,7 @@ UDP packet contrain hearder and data. Header contrain port info. The sent order 
 ### IPv4
 Take data segment from TCP and divides it into packets. Each packet contains header and data.
 ![IP Header](./ip_header.jpg)
+
+**Mask** <br />
+We can use mask to distinguish the network address and host address. Just do `and` operation to the address, the left non-zero is the network address.
+
