@@ -256,6 +256,28 @@ For a given page size, we only need to consider the page number.
 3. LFU (Least Frequently Used)
 4. Page Buffering
 
+### Scheduler
+1. Job queue : all process in the system
+2. Ready queue : a set of process reside in the main memory, ready and waiting to be executed
+3. IO waiting queue
+
+**Two state process model** <br />
+1. Running 
+2. Not running
+Each entry in a queue is a pointer points to a process. <br />
+
+
+**Scheduler** <br />
+1. Long-Term Scheduler <br />
+   Also called job scheduler, it selects process from queue and load them into main memory for execution. The primary objective of job scheduler is to provide a balanced mix of jobs, such as IO bound or processor bound. 
+2. Short-Term Scheduler <br />
+    Also called CPU scheduler, dispatcher, select process from ready queue to execute.
+3. Medium-Term Scheduler <br />
+    Part of swapping. It removes process from the memory, because some process might become suspended if it makes IO requests.
+
+**Context Switch** <br />
+To store and restore the state or context of a CPU in Process Control Block(PCB), so that a process execution can be resumed from the same point at a later time.
+
 ### Reference
 1. [Memory Management](https://www.tutorialspoint.com/operating_system/os_memory_management.htm)
 2. [Virtual Memory](https://www.tutorialspoint.com/operating_system/os_virtual_memory.htm)
