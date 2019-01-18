@@ -278,6 +278,19 @@ Each entry in a queue is a pointer points to a process. <br />
 **Context Switch** <br />
 To store and restore the state or context of a CPU in Process Control Block(PCB), so that a process execution can be resumed from the same point at a later time.
 
+**Schedule Algorithm** <br />
+1. First Come First Serve : Non-preemptive.
+2. Shortest Job Next : Shortest waiting time, but only for tasks that we know its execution time before enter CPU. Non-preemptive.
+3. Priority Schedule : Non-preemptive.
+4. Shortest Remaining Time : It's preemptive version of SJN.
+5. Round Robin : Preemptive. Each process is provided a fix time to execute, called quantum.
+6. Multi-level Queue : Combine with above algorithm.
+
+```command
+wait time = Service time - Arrival time
+```
+
+
 ### Reference
 1. [Memory Management](https://www.tutorialspoint.com/operating_system/os_memory_management.htm)
 2. [Virtual Memory](https://www.tutorialspoint.com/operating_system/os_virtual_memory.htm)
