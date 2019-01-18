@@ -45,4 +45,11 @@ Method are case-sensetive, should always and only be upper-case :
 6. TRACE : To echo the content of a request from server back to the requester used for debugging
 
 
-
+### What happen after type in something in browser and hit enter?
+The browser will first check the DNS cache in your browser. If there is no such entry, then it will check the OS DNS server. If still not, it will start to check the router cache. If still not, it will check ISP DNS. <br />
+If the requested URL is not in the ISP DNS, it will initiates a DNS query to find the IP address of the server that host the URl. <br />
+The DNS query will start to search multiple DNS server on the Internet till it finds the correct IP address. 
+![DNS query search](./DNS.png) <br />
+These requests are sent using small data packet which contains information such the content of the request and IP address it is destined for. These packets travel through many network equipments, which use routing table to figure out which way is the fastest way for the packets to its' destination. <br />
+After we have the IP address, the browser establish a connection using TCP/IP. Then the browser will transfer data using HTTP. <br />
+The detail checks the TCP/IP pages.
