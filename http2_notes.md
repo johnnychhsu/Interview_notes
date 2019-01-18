@@ -44,6 +44,18 @@ Method are case-sensetive, should always and only be upper-case :
 5. DELETE : To request server to delete a file specified by the given URL
 6. TRACE : To echo the content of a request from server back to the requester used for debugging
 
+### Http Header
+HTTP header fields provide required imformation about the request or response, or about the object sent in the message body. There are four types of header : 
+1. General header
+2. Client request header
+3. Server response header
+4. Entity header
+
+### Http Cache
+It is used to improve the performance. Cache-control header allows server or client to transmit a variety of directive in either request or response. <br />
+For example, in request cache header, we can use no-store to tell the server that the cache should not store anything about the client request and server response.
+<br />
+In response cache header, we can use public to indicate that this response can be cached by any cache.
 
 ### What happen after type in something in browser and hit enter?
 The browser will first check the DNS cache in your browser. If there is no such entry, then it will check the OS DNS server. If still not, it will start to check the router cache. If still not, it will check ISP DNS. <br />
