@@ -31,3 +31,7 @@ UDP packet contrain hearder and data. Header contrain port info. The sent order 
 1. Three times handshake : A send seq(x) to B for connection establishment. B reply with OK and seq(y), ack(x+1). x+1 means B reply to A because of reveiving A's message. Then A reply with ack(y+1), seq(z). The connection is established.
 2. For data transmition : A send seq(x) with length 1024 bytes, B reply with ack(x+1024).
 3. Disconnection : A send message to B says disconnect, B reply with OK. Then B send message to A says disconnect, A reply OK. (A send disconnect, but A can still receive, thus B has to send disconnect also.)
+
+### IPv4
+Take data segment from TCP and divides it into packets. Each packet contains header and data.
+![IP Header](./ip_header.jpg)
