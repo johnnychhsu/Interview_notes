@@ -53,3 +53,6 @@ The DNS query will start to search multiple DNS server on the Internet till it f
 These requests are sent using small data packet which contains information such the content of the request and IP address it is destined for. These packets travel through many network equipments, which use routing table to figure out which way is the fastest way for the packets to its' destination. <br />
 After we have the IP address, the browser establish a connection using TCP/IP. Then the browser will transfer data using HTTP. <br />
 The detail checks the TCP/IP pages.
+
+### Reference
+[What happen when type in google.com in browser?](https://medium.com/@maneesha.wijesinghe1/what-happens-when-you-type-an-url-in-the-browser-and-press-enter-bb0aa2449c1a)
