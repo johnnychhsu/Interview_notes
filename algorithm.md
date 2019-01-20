@@ -35,3 +35,16 @@ The idea is to connect the largest element in the left sub-tree back to the root
 ### Convert decimal to hexadecimal
 First convert `n` into binary form. For example, `29 -> 00011101`. Then, group every four bits together. Convert each group into decimal, then convert it to hexadecimal. Then we get the answer. <br />
 To get the digit for each group, we can do `&` with 15, which is `1111` in binary. Then we get the digit for this group in hexadecimal. Next, we do `n >>= 4`, then do the same thing again.
+
+### Implement queue in Python
+```python
+class Queue():
+    def __init__(self):
+        self.queue = []    
+
+    def enqueue(self, x):
+        self.queue.insert(0, x)
+
+    def dequeue(self):
+        self.queue.pop()
+```
