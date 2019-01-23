@@ -21,9 +21,29 @@ Take source code as input stream of characters, then converts it into meaningful
 It takes the tokens and generate a parse tree (syntax tree). Tokens arrangement are checked here whether it is syntactically correct. <br />
 **Semantic Analysis** <br />
 It checks whether the parse tree contructed follows the rule of language. For example, assignment of values is between compatible data types, or adding string to integer. <br />
+We can add semantic rules to the CFG. Thus each production rules followed by a semantic rules.
 
 ### Finite Automata 
 Can be used to verify the validity of a regular expression. When a regular expression string is fed into finite automata, it changes its state for each literal. If the input string is successfully processed and the automata reaches its final state, it is accepted, i.e., the string just fed was said to be a valid token of the language in hand.
+
+### Context Free Grammar
+1. Non-terminal
+2. Terminal
+3. Production rules
+4. Axioms
+
+Production rules tell how to map non-terminal to another groups of non-terminal or terminal characters. <br />
+This concept is used in syntax analysis stage.
+
+### Intermediate code
+Why we need intermediate code ? <br />
+This eliminates the need of a new full compiler for every unique machine. Because the second part of compiler, synthesis, is changed according to the target machine. <br />
+1. High level intermediate representation : close to source code
+2. Low level intermediate representation : close to machine code
+
+**DAG (Directed Acyclic Graph   )** <br />
+This is a tool that depicts the structure of basic blocks. <br />
+Leaf nodes are identifiers, while intermediate nodes are operators or expressinos of identifiers where values are stored.
 
 
 
