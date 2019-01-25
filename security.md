@@ -6,3 +6,24 @@
 
 ### SHA (Secure Hash Algorithm)
 1. SHA 1~3.
+
+### TLS (Transport Layer Security)
+1. The connection is private because symmetric cryptography is used to encrypt data transmitted.
+
+Client indicate the server to setup of a TLS connection, for example, https. Once client and server have agreed to use TLS, they negotiated a stateful connection by using a handshaking procedure. The whole procedure is like : 
+1. The handshake begins with a cilent connection to a TLS-enabled server requesting connection with supported cipher suites.
+2. Server pick a cipher and hash function that it also supports and notifies the client of the decision.
+3. The server usually then provide identification in the form of a digital certificate, containing server name and the server's public encryption key.
+4. The client confirm the validity of the certificate before proceeding.
+5. To generate the session key used for this connection, the client either:
+    1. encrypt a random number with the server's public key and sends the results to the server.
+    2. use Diffie-Hellman key exchange.
+
+### Symmetric cryptography v.s. Public Key cryptography (Asymmetric)
+**Symmetric cryptography** <br />
+Both sender and receiver use the same key.
+1. Block cipher or stream cipher
+
+**Asymmetric cryptography** <br />
+The public key can be distributed
+1. Use different key
