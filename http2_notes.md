@@ -70,5 +70,16 @@ The detail checks the TCP/IP pages.
 1. Cookie is in saved in local browser, which is client side.
 2. Session is save ion server. Request contain session ID, server will check whether there is a matching session for the request.
 
+### HTTP2
+Decrease latency to improve page load speed in web browser by considering : 
+1. data compressed of http header
+2. pipelining of requests
+3. multiplexing multiple requests over a single TCP connection
+4. Server push
+
+**Difference between Http 2 and Http 1.x** <br />
+1. Http 2 allow server to 'push' content. That is, allow server to respond with data more than the client requests. This allow server to supply data it knows a web browser will need to render a page without waiting for the browser to examine the first response, and without the overhead of an additional request cycle.
+2. Avoid head-of-line blocking by multiplexing: When the first packets is block in a FIFO buffer, the rest packets behind it are all block. 
+
 ### Reference
 [What happen when type in google.com in browser?](https://medium.com/@maneesha.wijesinghe1/what-happens-when-you-type-an-url-in-the-browser-and-press-enter-bb0aa2449c1a)
