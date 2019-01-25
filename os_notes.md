@@ -1,6 +1,20 @@
 ## OS related notes
 ### Process and threads
 ![Process](./process_components.jpg)
+1. Stack : Contains method/function parameters, return address
+2. Heap : Dynamically allocated memory to process during its run time.
+3. Text : Contains program counter and progress register.
+4. Data : Contains global and static variables.
+
+**Process Control Block** <br />
+It is a data structure maintained by OS. The PCB is identified by PID. A PCB keeps all the information needed to keep track of a process as listed below : 
+1. Process state
+2. Process privileges
+3. Process ID
+4. Pointer : point to parent
+5. Program counter : the address of the next instruction to be executed by the process.
+6. More  
+
 
 Thread is similar to process, thus also called light weight process. However, thread share some resource such as open files and signal, data segment.
 
