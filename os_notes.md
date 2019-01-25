@@ -1,5 +1,7 @@
 ## OS related notes
 ### Process and threads
+![Process](./process_components.jpg)
+
 Thread is similar to process, thus also called light weight process. However, thread share some resource such as open files and signal, data segment.
 
 Why we need multi-thread programming ? Because it can improve efficiency of program through parallel. Threads operate faster than process because : 
