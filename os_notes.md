@@ -1,5 +1,6 @@
 ## OS related notes
 ### Process and threads
+A progress is a program in execution. <br />
 ![Process](./process_components.jpg)
 1. Stack : Contains method/function parameters, return address
 2. Heap : Dynamically allocated memory to process during its run time.
@@ -15,7 +16,53 @@ It is a data structure maintained by OS. The PCB is identified by PID. A PCB kee
 5. Program counter : the address of the next instruction to be executed by the process.
 6. More  
 
+![Process Image](./process_image.jpg)
 
+**Inter Process Communication (IPC)** <br />
+Communication can be of two types : 
+1. Between process and its parent
+2. Between unrelated process
+
+**Fork** <br />
+Once `fork()` is called, it will return :
+1. 0 for child process
+2. Child PID for parent process
+3. < 0 if error occur
+```c
+#include <stdio.h>
+#include <sys/types.h>
+#include <unistd.h>
+
+int main() {
+   pid_t pid, mypid, myppid;
+   pid = getpid();
+   printf("Before fork: Process id is %d\n", pid);
+   pid = fork();
+
+   if (pid < 0) {
+      perror("fork() failure\n");
+      return 1;
+   }
+
+   // Child process
+   if (pid == 0) {
+      printf("This is child process\n");
+      mypid = getpid();
+      myppid = getppid();
+      printf("Process id is %d and PPID is %d\n", mypid, myppid);
+   } else { // Parent process 
+      sleep(2);
+      printf("This is parent process\n");
+      mypid = getpid();
+      myppid = getppid();
+      printf("Process id is %d and PPID is %d\n", mypid, myppid);
+      printf("Newly created process id or child pid is %d\n", pid);
+   }
+   return 0;
+}
+```
+
+**Threads** <br />
 Thread is similar to process, thus also called light weight process. However, thread share some resource such as open files and signal, data segment.
 
 Why we need multi-thread programming ? Because it can improve efficiency of program through parallel. Threads operate faster than process because : 
@@ -155,7 +202,7 @@ int main(void)
 }
 ```
 
-**Semaphore**
+**Semaphore** <br />
 It is a variable. There two kinds of semaphore : 
 1. Binary semaphore : 
     It is like mutex. When it is zero, wait. When it is one, operate the critical section.
