@@ -66,5 +66,9 @@ These requests are sent using small data packet which contains information such 
 After we have the IP address, the browser establish a connection using TCP/IP. Then the browser will transfer data using HTTP. <br />
 The detail checks the TCP/IP pages.
 
+### Cookie and Session
+1. Cookie is in saved in local browser, which is client side.
+2. Session is save ion server. Request contain session ID, server will check whether there is a matching session for the request.
+
 ### Reference
 [What happen when type in google.com in browser?](https://medium.com/@maneesha.wijesinghe1/what-happens-when-you-type-an-url-in-the-browser-and-press-enter-bb0aa2449c1a)
