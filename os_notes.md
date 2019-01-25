@@ -67,6 +67,69 @@ int main() {
 }
 ```
 
+**Named Pipe** <br />
+1. It is bidirectional
+2. FIFO
+
+**Shared memory** <br />
+1. Need to take care of race condition.
+
+**Message queue** <br />
+Why we use message queue though we already have shared memory?
+1. Synchronization problem
+2. Only few process need communication\
+3. If we want to send different size of data to different process, message queue is easier to implement
+4. FIFO
+It depends on our need.
+
+The difference between named pipe and message pipes are:
+1. Data chunck. Named pipe pass stream while message queue pass structure data chunk.
+2. Named pipe doesn't where an item start and end, thus it is purely FIFO. MQ can change the data order by reassign the priority.
+
+The reason we use FIFO is that it is simple, and thus low over head.
+
+**Signal** <br />
+A signal is a notification to a process indicating the occurance of an event. It is also called software interrupt. <br />
+For example, if do a divide by zero operation, system will generate an exception with a signal, the default action is core dump. We can change the signal handler:
+```c
+/* signal_fpe_handler.c */
+#include<stdio.h>
+#include<signal.h>
+#include<stdlib.h>
+
+void handler_dividebyzero(int signum);
+
+int main() {
+   int result;
+   int v1, v2;
+   void (*sigHandlerReturn)(int);
+   sigHandlerReturn = signal(SIGFPE, handler_dividebyzero);
+   if (sigHandlerReturn == SIG_ERR) {
+      perror("Signal Error: ");
+      return 1;
+   }
+   v1 = 121;
+   v2 = 0;
+   result = v1/v2;
+   printf("Result of Divide by Zero is %d\n", result);
+   return 0;
+}
+
+void handler_dividebyzero(int signum) {
+   if (signum == SIGFPE) {
+      printf("Received SIGFPE, Divide by Zero Exception\n");
+      exit (0);
+   } 
+   else
+      printf("Received %d Signal\n", signum);
+      return;
+}
+```
+
+**Memory mapping** <br />
+`mmap()` system call will map the virtual address space of the calling process to files or devices.
+1. File mapping : Map the virtual address to files. Thus read/write to the address causes the files to be read or written.
+2. Anonymous mapping : No mapping to file. Similar to `malloc()`.
 
 **Fork()** <br />
 Once `fork()` is called, it will return :
