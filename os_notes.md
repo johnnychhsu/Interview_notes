@@ -23,7 +23,7 @@ Communication can be of two types :
 1. Between process and its parent
 2. Between unrelated process
 
-**Fork** <br />
+**Fork()** <br />
 Once `fork()` is called, it will return :
 1. 0 for child process
 2. Child PID for parent process
@@ -61,6 +61,38 @@ int main() {
    return 0;
 }
 ```
+
+**Wait()** <br />
+If parent process finish early than child, then the child's parent becomes init process, whose PID is 1.
+```c
+#include<stdio.h>
+
+int main() {
+   int pid;
+   int status;
+   pid = fork();
+   
+   // Child process
+   if (pid == 0) {
+      system("ps -ef");
+      sleep(10);
+      system("ps -ef");
+      return 3; //exit status is 3 from child process
+   } else {
+      sleep(3);
+      wait(&status);
+      printf("In parent process: exit status from child is decimal %d, hexa %0x\n", status, status);
+   }
+   return 0;
+}
+```
+
+**Orphan process and Zombie process** <br />
+1. Orphan process : parent process finish early than child, than init process will become parent of the orphan process
+2. Zombie process : child process is finished, but parent process is not ready to clean up the child process.
+
+**Daemon process** <br />
+Processes that are not associated with any terminal or shell. Run in the background, usually ends up with 'd', for example, 'sshd'.
 
 **Threads** <br />
 Thread is similar to process, thus also called light weight process. However, thread share some resource such as open files and signal, data segment.
