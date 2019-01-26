@@ -52,6 +52,55 @@ class Queue():
 [Min Heap](./myheap.py)
 
 ### A\*
+A\* is the most popular algorithm for path finding.
+1. A\* is like Dijkstra that it can be used to find a shortest path
+2. A\* is like greedy Best First Search that it can use a heuristic to guide
+It consider both the distance from starting point and distance from goal. <br />
+**Heuristic** <br />
+Trade between accuracy and speed. Heuristic value compared to the true value leads to different result.
+1. If heuristic lower, then A\* is more similar to Dijkstra.
+2. If it is higher, then it is more similar to greedy best first search.
 
+```python
+def heuristic(a, b):
+    (x1, y1) = a
+    (x2, y2) = b
+    return abs(x1 - x2) + abs(y1 - y2)
 
+def a_star_search(graph, start, goal):
+    frontier = PriorityQueue()
+    frontier.put(start, 0)
+    came_from = {}
+    cost_so_far = {}
+    came_from[start] = None
+    cost_so_far[start] = 0
+    
+    while not frontier.empty():
+        current = frontier.get()
+        
+        if current == goal:
+            break
+        
+        for next in graph.neighbors(current):
+            new_cost = cost_so_far[current] + graph.cost(current, next)
+            if next not in cost_so_far or new_cost < cost_so_far[next]:
+                cost_so_far[next] = new_cost
+                priority = new_cost + heuristic(goal, next)
+                frontier.put(next, priority)
+                came_from[next] = current
+    
+    return came_from, cost_so_far
+
+def reconstruct_path(came_from, start, goal):
+    current = goal
+    path = []
+    while current != start:
+        path.append(current)
+        current = came_from[current]
+    path.append(start) # optional
+    path.reverse() # optional
+    return path
+```
+#### Reference
+[A\* Algorithm](http://theory.stanford.edu/~amitp/GameProgramming/ImplementationNotes.html)
 
