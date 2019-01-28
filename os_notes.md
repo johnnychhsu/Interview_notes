@@ -7,6 +7,9 @@ A progress is a program in execution. <br />
 3. Text : Contains program counter and progress register.
 4. Data : Contains global and static variables.
 
+**Stack and Heap memory reference** <br />
+1. [Medium Article](https://medium.freecodecamp.org/understand-your-programs-memory-92431fa8c6b)
+
 **Process Control Block** <br />
 It is a data structure maintained by OS. The PCB is identified by PID. A PCB keeps all the information needed to keep track of a process as listed below : 
 1. Process state
