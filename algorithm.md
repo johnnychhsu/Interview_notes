@@ -47,7 +47,7 @@ y = a - c
 # Suppose x < 0, y > 0, we choose a
 ```
 
-### Pattern Matcing : KMT Algorithm
+### Pattern Matching : KMT Algorithm
 ```python
 def KMPSearch(pat, txt): 
     M = len(pat) 
