@@ -2,8 +2,8 @@
 ### Process and threads
 A progress is a program in execution. <br />
 ![Process](./process_components.jpg)
-1. Stack : Contains method/function parameters, return address
-2. Heap : Dynamically allocated memory to process during its run time.
+1. Stack : Contains method/function parameters, return address. Without `malloc()`, the memory will released automatically since the function return.
+2. Heap : Dynamically allocated memory to process during its run time. Used with `malloc()` and `free()`.
 3. Text : Contains program counter and progress register.
 4. Data : Contains global and static variables.
 
