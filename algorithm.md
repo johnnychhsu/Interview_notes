@@ -183,3 +183,12 @@ def reconstruct_path(came_from, start, goal):
 #### Reference
 [A\* Algorithm](http://theory.stanford.edu/~amitp/GameProgramming/ImplementationNotes.html)
 
+### How to prove DP algorithm
+1. Define sub-problem
+2. Present the recurrence
+3. Justify it is correct
+4. State base case
+5. Present the algorithm
+6. Time and space complexity
+#### Reference
+1. [DP Prove Steps](https://www.cs.oberlin.edu/~asharp/cs280/2012fa/handouts/dp.pdf)
