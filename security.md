@@ -24,6 +24,14 @@ Client indicate the server to setup of a TLS connection, for example, https. Onc
 Both sender and receiver use the same key.
 1. Block cipher or stream cipher
 
+**Security issue** <br />
+1. Once the unauthorized third party knows the key, they can modify the content and send it again.
+2. How to deliver the private key to receiver?
+
 **Asymmetric cryptography** <br />
 The public key can be distributed
 1. Use different key
+
+**Security issue** <br />
+1. Current computer architecture's calculation is based on binary manipulation. Thus it needs lots of lots of time to find the private key given the public key.
+
