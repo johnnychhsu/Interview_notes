@@ -30,6 +30,12 @@
     ```
     4. Use case example : [NBA Playoff prediction](https://neo4j.com/graphgist/nba-playoff-prediction)
 
+
+### Concurrency problems in DB
+1. dirty read : when a transaction is allowed to read a row that has been modified by another transaction which is not committed yet.
+2. non-repeatable read : when a transaction read the same row twice but get different value.
+3. phantom read : when two same queries are executed, the rows retrieved by the two are different. 
+
 ### Index in DB
 1. Primary Index : An ordered index, usually the key attribute of the table.
 2. Secondary Index : May be non-ordered. Can be other candidate key or non-key value.
@@ -38,6 +44,20 @@
 
 **Dense and Sparse** <br />
 One-to-One or One-to-Many. If it's sparse, it first find the head of the data block, then sequential search.
+
+**Clustered and Non-clustered** <br />
+1. There can only be one clustered index for a table.
+2. Can be more than one non-clustered index.
+
+**When should index be created?** <br />
+1. A column contains a wide range of data
+2. A column doesn't contain lots of null
+3. Columns that are frequently used in where clauses or join condition
+
+**When index should not be created?** <br />
+1. The table is small
+2. Columns that are updated frequently
+
 
 ### B tree
 **Properties** <br />
