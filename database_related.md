@@ -38,3 +38,22 @@
 
 **Dense and Sparse** <br />
 One-to-One or One-to-Many. If it's sparse, it first find the head of the data block, then sequential search.
+
+### B tree
+**Properties** <br />
+1. All leaves are at the same level
+2. It is defined by a minimum degree `t`
+3. Every nodes except the root must contain at least t-1 keys. Root can contain minumum one key
+4. All nodes (including root) can have at most `2t-1` keys
+5. Number of children equals to the number of keys plus one
+6. All keys of a node are stored in increasing order
+7. B tree grows up when insertion happen.
+
+
+### B+ tree
+Original B tree stores pointer to the disk file block containing the key value. This technique greatly reduce the number of entries that can be packed into a node of B tree. Hence increase the level of B tree, thus increase the search time of a record. <br />
+B+ tree eliminate the drawbacks by storing data pointers only at the leaf nodes of the tree, thus each nodes can store more entries. Besides, leaf nodes are connected togrther, thus only one path from root to leaf can access all leaf nodes.
+
+
+
+
