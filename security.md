@@ -35,3 +35,10 @@ The public key can be distributed
 **Security issue** <br />
 1. Current computer architecture's calculation is based on binary manipulation. Thus it needs lots of lots of time to find the private key given the public key.
 
+### How to prevent DoS?
+1. Firewall : Some firewalls are stateful. They not just forward the packets but validates the packets with the client.
+2. Switch : Some of the preventions are delayed binding (TCP splicing).
+3. Router : Rate limiting.
+
+### DDoS
+1. SYN Flooding : Bad clients send multiple SYN to server, the server will send SYN-ACK, then keep waiting for the ACK that will never be sent by the attacker.
