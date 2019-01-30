@@ -36,6 +36,13 @@
 2. non-repeatable read : when a transaction read the same row twice but get different value.
 3. phantom read : when two same queries are executed, the rows retrieved by the two are different. 
 
+**Deadlock avoidance and deadlock prevention** <br />
+1. Avoidance : If the database is small, then we can use this scenario. Such as ask for resources in the same order. 
+2. Prevention : 
+    1. wait-die scheme : If both t1 and t2 ask for the same resource, the younger transaction is killed, the older is allowed to wait.
+
+3. Starvation problem : Due to unfair priority, some transaction might wait forever. We can solve this by first-come-first-serve, according to the origin request time.
+
 ### Index in DB
 1. Primary Index : An ordered index, usually the key attribute of the table.
 2. Secondary Index : May be non-ordered. Can be other candidate key or non-key value.
