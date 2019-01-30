@@ -31,7 +31,7 @@
     4. Use case example : [NBA Playoff prediction](https://neo4j.com/graphgist/nba-playoff-prediction)
 
 ### Index in DB
-1. Promary Index : An ordered index, usually the key attribute of the table.
+1. Primary Index : An ordered index, usually the key attribute of the table.
 2. Secondary Index : May be non-ordered. Can be other candidate key or non-key value.
 3. Clustering Index : Ordered index, non-key value.
 4. Multi-level index : To make the index structure smaller.
