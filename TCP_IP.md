@@ -23,6 +23,11 @@ Examples like TCP, UDP.
 #### Application Layer
 Here we define the type of each application, such as http, mail, ... etc. The header depends on the type of service.
 
+#### TCP congestion control
+To avoid network congestion, TCP has congestion control strategy. <br />
+For each connection, TCP maintain a congestion window, limiting the total number of unacknowledged packets that may be in the trainsit end-to-end. TCP use a mechanism called slow start to increase the congestion window after a connection is initialized or a time-out. <br />
+Although this is similar to sliding window of TCP flow control, actually they are different. 
+
 #### UDP & TCP
 **UDP**
 UDP packet contrain hearder and data. Header contrain port info. The sent order may be different from receive order. UDP don't care whether the reveiver receive or not.
