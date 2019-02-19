@@ -203,6 +203,7 @@ The postconsition can be as a composition as invariance and exiting condition. W
 #### Reference
 1. [Loop Invariance Paper](https://arxiv.org/pdf/1211.4470.pdf)
 2. [Partial Correctness of computer program](https://medium.com/@tranduchanh.ms/partial-correctness-of-computer-program-f541490e7a21)
+3. [Loop Invariance Video](https://www.youtube.com/watch?v=3YP6NP1_tF0)
 
 #### Reference
 1. [DP Prove Steps](https://www.cs.oberlin.edu/~asharp/cs280/2012fa/handouts/dp.pdf)
