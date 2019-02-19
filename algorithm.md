@@ -190,5 +190,19 @@ def reconstruct_path(came_from, start, goal):
 4. State base case
 5. Present the algorithm
 6. Time and space complexity
+
+### Loop Invariance
+To prove a computer program, there are two corectness.
+1. Partial correctness : If an answer is returned, it is correct
+2. Total correctness : The program terminate
+
+Due to halting problem, total correctness is not decidible. We can prove the partial correctness by loop invariance. <br />
+The loop invariance hold for precondition, after each iteration and after exiting the loop. <br />
+The postconsition can be as a composition as invariance and exiting condition. We need to find some previous state that holds the loop invariance, but slightly away from the exiting condition. Accordingly, we need to find a initial state that holds the invariance as the init of the algorithm.
+
+#### Reference
+1. [Loop Invariance Paper](https://arxiv.org/pdf/1211.4470.pdf)
+2. [Partial Correctness of computer program](https://medium.com/@tranduchanh.ms/partial-correctness-of-computer-program-f541490e7a21)
+
 #### Reference
 1. [DP Prove Steps](https://www.cs.oberlin.edu/~asharp/cs280/2012fa/handouts/dp.pdf)

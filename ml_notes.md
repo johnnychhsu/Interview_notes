@@ -15,3 +15,6 @@ However, we don't do drop out when inferencing, thus cause this proble.
 
 ### Miscellaneous
 1. [Thoughts on the BagNet Paper](https://blog.evjang.com/2019/02/bagnet.html)
+
+### Papers
+1. [What have deep net done for vision?](https://arxiv.org/pdf/1805.04025.pdf)
