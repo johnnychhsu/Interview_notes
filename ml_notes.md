@@ -12,6 +12,7 @@ However, we don't do drop out when inferencing, thus cause this proble.
 1. [10 leads of NLP in 2018](http://ruder.io/10-exciting-ideas-of-2018-in-nlp/)
 2. Knowledge Graph Embedding \[[paper](https://arxiv.org/pdf/1811.04588.pdf)\] \[[code](https://github.com/davidlvxin/TransC)\]
 3. [Introduction to BERT](http://bangqu.com/hiA591.html)
+4. [Strutured Attention Network](https://arxiv.org/abs/1702.00887)
 
 ### Miscellaneous
 1. [Thoughts on the BagNet Paper](https://blog.evjang.com/2019/02/bagnet.html)
