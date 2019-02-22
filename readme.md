@@ -14,6 +14,7 @@
 11. [Security related notes](https://github.com/johnnychhsu/Interview_notes/blob/master/security.md)
 12. [Network device notes](https://github.com/johnnychhsu/Interview_notes/blob/master/router.md)
 13. [System Design](https://github.com/johnnychhsu/Interview_notes/blob/master/system_design.md)
+14. [Git related](https://github.com/johnnychhsu/Interview_notes/blob/master/git_notes.md)
 
 ### Reference
 1. [HTTP Tutorials](https://www.tutorialspoint.com/http/http_status_codes.htm)
