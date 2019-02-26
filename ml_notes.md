@@ -17,6 +17,7 @@ However, we don't do drop out when inferencing, thus cause this proble.
 ### Miscellaneous
 1. [Thoughts on the BagNet Paper](https://blog.evjang.com/2019/02/bagnet.html)
 2. [Interpretability of CNN](https://zhuanlan.zhihu.com/p/30074544)
+3. [RT streaming anomaly dtection](https://towardsdatascience.com/real-time-streaming-and-anomaly-detection-pipeline-on-aws-cbd0bef6f20e)
 
 ### Papers
 1. [What have deep net done for vision?](https://arxiv.org/pdf/1805.04025.pdf)
