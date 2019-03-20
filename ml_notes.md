@@ -13,6 +13,7 @@ However, we don't do drop out when inferencing, thus cause this problem.
 2. Knowledge Graph Embedding \[[paper](https://arxiv.org/pdf/1811.04588.pdf)\] \[[code](https://github.com/davidlvxin/TransC)\]
 3. [Introduction to BERT](http://bangqu.com/hiA591.html)
 4. [Strutured Attention Network](https://arxiv.org/abs/1702.00887)
+5. [GPT2, Language model are unsupervised multitask learners](https://openai.com/blog/better-language-models/)
 
 ### Miscellaneous
 1. [Thoughts on the BagNet Paper](https://blog.evjang.com/2019/02/bagnet.html)
