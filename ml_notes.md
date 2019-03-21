@@ -18,6 +18,9 @@ However, we don't do drop out when inferencing, thus cause this problem.
 **Conditional random field for Chinese word segmentation** <br />
 This is an old method. It takes raw text, output binary label indicating whether there is a space or not for each charater in the text.
 
+#### Why knowledge embedding is important for English more than for Chinese?
+Because there are way more words in English than in Chinese. A round 3000 words can cover all Chinese corpus. In English, there around 20000~30000 common words. It is more difficult for computer to figure out the relation between English words, though there might exist some relation.
+
 ### Miscellaneous
 1. [Thoughts on the BagNet Paper](https://blog.evjang.com/2019/02/bagnet.html)
 2. [Interpretability of CNN](https://zhuanlan.zhihu.com/p/30074544)
