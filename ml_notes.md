@@ -15,6 +15,9 @@ However, we don't do drop out when inferencing, thus cause this problem.
 4. [Strutured Attention Network](https://arxiv.org/abs/1702.00887)
 5. [GPT2, Language model are unsupervised multitask learners](https://openai.com/blog/better-language-models/)
 
+**Conditional random field for Chinese word segmentation** <br />
+This is an old method. It takes raw text, output binary label indicating whether there is a space or not for each charater in the text.
+
 ### Miscellaneous
 1. [Thoughts on the BagNet Paper](https://blog.evjang.com/2019/02/bagnet.html)
 2. [Interpretability of CNN](https://zhuanlan.zhihu.com/p/30074544)
