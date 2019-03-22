@@ -9,12 +9,12 @@ Translate a language into another language. For example, translate C++ to assemb
 5. Loader
 
 ### Analysis and Synthesis
-![compiler stage](./compiler_stages.jpg) <br />
+![compiler stage](../pic/compiler_stages.jpg) <br />
 
 In analysis stage, compiler would check syntax, grammer of the source code, then generate intermediate code for synthsis stage.
 
 ### Phases of compiler
-![Compiler Phases](./compiler_phases.jpg) <br />
+![Compiler Phases](../pic/compiler_phases.jpg) <br />
 **Lexical Analysis** <br />
 Take source code as input stream of characters, then converts it into meaningful lexems. Then represent these lexemes as token `<token name, attribute value>`. <br />
 **Syntax Analysis** <br />

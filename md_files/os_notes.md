@@ -1,7 +1,7 @@
 ## OS related notes
 ### Process and threads
 A progress is a program in execution. <br />
-![Process](./process_components.jpg)
+![Process](../pic/process_components.jpg)
 1. Stack : Contains method/function parameters, return address. Without `malloc()`, the memory will released automatically since the function return.
 2. Heap : Dynamically allocated memory to process during its run time. Used with `malloc()` and `free()`.
 3. Text : Contains program counter and progress register.
@@ -19,7 +19,7 @@ It is a data structure maintained by OS. The PCB is identified by PID. A PCB kee
 5. Program counter : the address of the next instruction to be executed by the process.
 6. More  
 
-![Process Image](./process_image.jpg)
+![Process Image](../pic/process_image.jpg)
 
 **Inter Process Communication (IPC)** <br />
 Communication can be of two types : 
@@ -398,7 +398,7 @@ The process address space is the set of logical addresses that a process referen
 Swapping is a mechanism in which a process can be swapped temporarily out of main memory (or move) to secondary storage (disk) and make that memory available to other processes.
 <br />
 
-![Swapping](./process_swapping.jpg)
+![Swapping](../pic/process_swapping.jpg)
 
 **Fragmentation** <br />
 As precesses are loaded and removed from memory, the free memory space are broken into pieces. These pieces are not continuous thus the left space might be enough, but no continuous space can be fitted for a new progress.
@@ -406,7 +406,7 @@ As precesses are loaded and removed from memory, the free memory space are broke
     Total memory space is enough to satisfy a request or to reside a process in it, but it is not contiguous, so it cannot be used.
 2. Internal fragmentation : 
     Memory block assigned to process is bigger. Some portion of memory is left unused, as it cannot be used by another process.
-![Fragmentation](./memory_fragmentation.jpg)
+![Fragmentation](../pic/memory_fragmentation.jpg)
 
 External fragmentation can be solved by memory compaction or shuffle memory contents to place all free memory together in one large block.
 <br />
@@ -415,7 +415,7 @@ External fragmentation can be solved by memory compaction or shuffle memory cont
 Paging is a memory management technique in which process address space is broken into blocks of the same size called pages. The size of the process is measured in the number of pages. <br />
 Similarly, main memory is divided into small fixed-sized blocks of (physical) memory called frames and the size of a frame is kept the same as that of a page to have optimum utilization of the main memory and to avoid external fragmentation. <br />
 
-![Page map](./page_map_table.jpg)
+![Page map](../pic/page_map_table.jpg)
 <br />
 **Address Translation** <br />
 1. Page address is called logical address. 
@@ -432,7 +432,7 @@ Segmentation is a memory management technique in which each job is divided into 
 <br />
 Segmentation memory management works very similar to paging but here segments are of variable-length where as in paging pages are of fixed size.
 <br />
-![Segmentation map](./segment_map_table.jpg)
+![Segmentation map](../pic/segment_map_table.jpg)
 
 **Address Binding** <br />
 1. Compile Time : <br />
