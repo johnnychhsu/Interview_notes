@@ -15,6 +15,7 @@
 12. [Network device notes](https://github.com/johnnychhsu/Interview_notes/blob/master/md_files/router.md)
 13. [System Design](https://github.com/johnnychhsu/Interview_notes/blob/master/md_files/system_design.md)
 14. [Git related](https://github.com/johnnychhsu/Interview_notes/blob/master/md_files/git_notes.md)
+14. [HMM](https://github.com/johnnychhsu/Interview_notes/blob/master/md_files/hmm.md)
 
 ### DDIA notes
 [DDIA](https://github.com/johnnychhsu/Interview_notes/blob/master/DDIA/readme.md)
