@@ -1,5 +1,19 @@
 ## Algorithm 
 
+### Doubly linked list
+We can use only one pointer to save the next and previous node information. We only need to save the xor result of the next node address and previous node address.
+```c++
+typedef int T;
+typedef struct listNode{
+    T elm;
+    struct listNode * ptrdiff;
+};
+```
+In this case, we can start traversal from head or tail. Each time we xor with the previous node, then we can get the address of next node.
+
+#### Reference
+1. [A memory efficient doubly linked list](https://www.linuxjournal.com/article/6828)
+
 ### Trie
 1. Used for prefix search.
 
