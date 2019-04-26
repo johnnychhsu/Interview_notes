@@ -14,6 +14,8 @@ However, we don't do drop out when inferencing, thus cause this problem.
 3. [Introduction to BERT](http://bangqu.com/hiA591.html)
 4. [Strutured Attention Network](https://arxiv.org/abs/1702.00887)
 5. [GPT2, Language model are unsupervised multitask learners](https://openai.com/blog/better-language-models/)
+6. [Contextual string embedding](http://alanakbik.github.io/papers/coling2018.pdf)
+    Character level embedding and then feed to word level embedding. It's a stack of embedding.
 
 **Conditional random field for Chinese word segmentation** <br />
 This is an old method. It takes raw text, output binary label indicating whether there is a space or not for each charater in the text.
