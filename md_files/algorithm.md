@@ -17,6 +17,9 @@ In this case, we can start traversal from head or tail. Each time we xor with th
 ### Trie
 1. Used for prefix search.
 
+### Suffix Tree
+1. [Suffix Tree notebook](../python_files/suffix_tree.ipynb)
+
 ### Segment Tree
 1. Compressed Trie.
 2. It is used when we need to find Maximum/Minumum/Sum/Product of numbers in a range.
