@@ -35,3 +35,6 @@ Because there are way more words in English than in Chinese. A round 3000 words 
 1. [What have deep net done for vision?](https://arxiv.org/pdf/1805.04025.pdf)
 2. [Model based RL](https://medium.com/syncedreview/google-brain-simple-complete-model-based-reinforcement-learning-for-atari-b350a960921c)
 3. [Adabound, an optimizer as fast as Adam, as good as SGD](https://github.com/Luolc/AdaBound)
+
+### Reinforcement learning
+1. [Fast and slow RL](https://www.cell.com/trends/cognitive-sciences/fulltext/S1364-6613(19)30061-0)
