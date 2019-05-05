@@ -14,6 +14,8 @@ However, we don't do drop out when inferencing, thus cause this problem.
 3. [Introduction to BERT](http://bangqu.com/hiA591.html)
 4. [Strutured Attention Network](https://arxiv.org/abs/1702.00887)
 5. [GPT2, Language model are unsupervised multitask learners](https://openai.com/blog/better-language-models/)
+6. [Contextual string embedding](http://alanakbik.github.io/papers/coling2018.pdf)
+    Character level embedding and then feed to word level embedding. It's a stack of embedding.
 
 **Conditional random field for Chinese word segmentation** <br />
 This is an old method. It takes raw text, output binary label indicating whether there is a space or not for each charater in the text.
@@ -33,3 +35,6 @@ Because there are way more words in English than in Chinese. A round 3000 words 
 1. [What have deep net done for vision?](https://arxiv.org/pdf/1805.04025.pdf)
 2. [Model based RL](https://medium.com/syncedreview/google-brain-simple-complete-model-based-reinforcement-learning-for-atari-b350a960921c)
 3. [Adabound, an optimizer as fast as Adam, as good as SGD](https://github.com/Luolc/AdaBound)
+
+### Reinforcement learning
+1. [Fast and slow RL](https://www.cell.com/trends/cognitive-sciences/fulltext/S1364-6613(19)30061-0)

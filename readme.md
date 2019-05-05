@@ -20,5 +20,8 @@
 ### DDIA notes
 [DDIA](https://github.com/johnnychhsu/Interview_notes/blob/master/DDIA/readme.md)
 
+### Useful blog posts
+1. [How to read code?](https://hackernoon.com/one-secret-to-becoming-a-great-software-engineer-read-code-467e31f243b0)
+
 ### Reference
 1. [HTTP Tutorials](https://www.tutorialspoint.com/http/http_status_codes.htm)
