@@ -82,5 +82,7 @@ Original B tree stores pointer to the disk file block containing the key value. 
 B+ tree eliminate the drawbacks by storing data pointers only at the leaf nodes of the tree, thus each nodes can store more entries. Besides, leaf nodes are connected togrther, thus only one path from root to leaf can access all leaf nodes.
 
 
+### Papers
+1. [Google Bigtable](https://storage.googleapis.com/pub-tools-public-publication-data/pdf/68a74a85e1662fe02ff3967497f31fda7f32225c.pdf)
 
 
