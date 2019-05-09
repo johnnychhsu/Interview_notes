@@ -17,6 +17,7 @@
 14. [Git related](https://github.com/johnnychhsu/Interview_notes/blob/master/md_files/git_notes.md)
 15. [HMM](https://github.com/johnnychhsu/Interview_notes/blob/master/md_files/hmm.md)
 16. [Python notes](https://github.com/johnnychhsu/Interview_notes/blob/master/md_files/python_notes.md)
+17. [Scala](https://github.com/johnnychhsu/Interview_notes/blob/master/md_files/scala.md)
 
 ### DDIA notes
 [DDIA](https://github.com/johnnychhsu/Interview_notes/blob/master/DDIA/readme.md)
