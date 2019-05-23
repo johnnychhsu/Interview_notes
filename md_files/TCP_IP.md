@@ -44,3 +44,27 @@ Take data segment from TCP and divides it into packets. Each packet contains hea
 **Mask** <br />
 We can use mask to distinguish the network address and host address. Just do `and` operation to the address, the left non-zero is the network address.
 
+
+### TCP details
+TCP can be described as a sliding window protocol with cumulative positive acknowledgement.
+#### Window of packets and sliding window
+This mechanism can handle problems like how many packets are sent, how many are ACK, how many are still waiting.
+
+#### Variable window : flow control and congestion control
+1. Rate based flow control : sender is limited under a sending rate
+2. Window based flow control : receiver will send window update to sender to update the window size
+
+Above can control the transfer rate between sender and receiver. But what if the routers between senders and receivers have limited memory? This might cause packets lost.
+
+Congestion control will take this into consideration. The window size should be update by not only explicit update from receiver, but also guess the network condition, and change the window size accordingly.
+
+#### Retransmission rate
+1. Round trip time estimation : usually the sample mean of a collection of RTTs.
+
+#### Valid tcp packet
+Only need to know the 4-tuple contining two end IP address and port, with valid sequence number within the sliding window are sufficient to ba a valid packet.
+
+#### Interactive and bulk data
+Both use the same packet format and TCP protocol. However, the time requirement is different. Think about online game, we need to react to users' action immediately. If we need to wait for ACK for every operation such as mouse clicking, this will harm the user experience.
+
+We can disable Nagle algorithm to speed up for interactive transfer.
