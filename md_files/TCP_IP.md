@@ -68,3 +68,16 @@ Only need to know the 4-tuple contining two end IP address and port, with valid 
 Both use the same packet format and TCP protocol. However, the time requirement is different. Think about online game, we need to react to users' action immediately. If we need to wait for ACK for every operation such as mouse clicking, this will harm the user experience.
 
 We can disable Nagle algorithm to speed up for interactive transfer.
+
+#### Congestion
+Because the routers has limited buffer, thus if the receiving rate is higher than sending rate, there will be congestion.
+
+A packet loss can be though as congestion. TCP need to know whether a packet loss is due to congestion or transmission error.
+
+The window size is determined by `min(congestion window, advertised window)`. These two are estimmatd from network condition and from receiver.
+
+Self-clock. Once the sender receives a ACK from receiver, it knows that it send another packet out.
+
+Usually TCP begins a connection with slow start, eventually drops a packet, then settles into steady-state operation using congestion avoidance algorithn. Once the slow start threshold is established, TCP will run congestion avoidance algorithm.
+
+SMSS (Sender Maximum Segment Size)
