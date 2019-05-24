@@ -80,4 +80,10 @@ Self-clock. Once the sender receives a ACK from receiver, it knows that it send 
 
 Usually TCP begins a connection with slow start, eventually drops a packet, then settles into steady-state operation using congestion avoidance algorithn. Once the slow start threshold is established, TCP will run congestion avoidance algorithm.
 
+The threshold varies over time. It is established once a retransmission occurs. It could be reduceed half due to the packet drop. `ssthresh = max(flight size/2, 2*SMSS)` is used when packet drop occurs.
+
 SMSS (Sender Maximum Segment Size)
+
+Slow start increase the congestion window size exponentially.
+
+Congestion algorithm increase the congestion window size linearly.
