@@ -65,3 +65,4 @@ Consider the state transition between client and server, we can first imagine ho
 2. [HighScalability.com](http://highscalability.com/)
 3. [Facebook network at large](https://code.fb.com/networking-traffic/networking-scale-may-2016-recap/)
 4. [Scalable web architecture](http://www.aosabook.org/en/distsys.html)
+5. [500 lines of code](http://www.aosabook.org/en/index.html)
